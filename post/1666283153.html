@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>接入百度熊掌号流程记录添加canonical标签、JSON_LD数据、关注代码等 | 溜追是菜鸟</title><meta name="author" content="溜追"><meta name="copyright" content="溜追"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="第一次接触百度站长工具，注册了一个百度熊掌号，研究好久都不知道怎么用，先接入再说，以后在慢慢研究吧。以下是添加canonical标签、JSON_LD数据、关注代码的过程记录。 第一步：添加canonical标签官方介绍：要求href的内容为MIP页或H5页对应的PC页地址；如果没有PC页，则填写当前页面地址。 1&lt;link rel&#x3D;&quot;canonical&quot; href&#x3D;&amp;qu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="接入百度熊掌号流程记录添加canonical标签、JSON_LD数据、关注代码等">
+<meta property="og:url" content="https://www.liuzw.cn/post/1666283153.html">
+<meta property="og:site_name" content="溜追是菜鸟">
+<meta property="og:description" content="第一次接触百度站长工具，注册了一个百度熊掌号，研究好久都不知道怎么用，先接入再说，以后在慢慢研究吧。以下是添加canonical标签、JSON_LD数据、关注代码的过程记录。 第一步：添加canonical标签官方介绍：要求href的内容为MIP页或H5页对应的PC页地址；如果没有PC页，则填写当前页面地址。 1&lt;link rel&#x3D;&quot;canonical&quot; href&#x3D;&amp;qu">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn-2do.pages.dev/logo.svg">
+<meta property="article:published_time" content="2017-11-04T16:00:00.000Z">
+<meta property="article:modified_time" content="2017-11-04T16:00:00.000Z">
+<meta property="article:author" content="溜追">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn-2do.pages.dev/logo.svg"><link rel="shortcut icon" href="https://cdn-2do.pages.dev/favicon.svg"><link rel="canonical" href="https://www.liuzw.cn/post/1666283153.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '接入百度熊掌号流程记录添加canonical标签、JSON_LD数据、关注代码等',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2017-11-05 00:00:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn-2do.pages.dev/logo.svg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="溜追是菜鸟"><span class="site-name">溜追是菜鸟</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">接入百度熊掌号流程记录添加canonical标签、JSON_LD数据、关注代码等</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2017-11-04T16:00:00.000Z" title="发表于 2017-11-05 00:00:00">2017-11-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2017-11-04T16:00:00.000Z" title="更新于 2017-11-05 00:00:00">2017-11-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="接入百度熊掌号流程记录添加canonical标签、JSON_LD数据、关注代码等"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>第一次接触百度站长工具，注册了一个百度熊掌号，研究好久都不知道怎么用，先接入再说，以后在慢慢研究吧。以下是添加canonical标签、JSON_LD数据、关注代码的过程记录。</p>
+<p>第一步：添加canonical标签<br>官方介绍：<br>要求href的内容为MIP页或H5页对应的PC页地址；如果没有PC页，则填写当前页面地址。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;canonical&quot; href=&quot;http(s)://xxx&quot;/&gt;</span><br></pre></td></tr></table></figure>
+
+<p>操作记录：<br>找到对应的header.php文件，在<head>后面添加以下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--百度熊掌号添加canonical标签--&gt;</span><br><span class="line">&lt;link rel=&quot;canonical&quot; href=&quot;&lt;?php the_permalink() ?&gt;&quot;/&gt;</span><br></pre></td></tr></table></figure>
+
+<p>第二步：添加JSON_LD数据<br>官方介绍：<br>下方代码为JSON-LD示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;application/ld+json&quot;</span>&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&quot;@context&quot;</span>: <span class="string">&quot;https://ziyuan.baidu.com/contexts/cambrian.jsonld&quot;</span>,</span><br><span class="line">        <span class="string">&quot;@id&quot;</span>: <span class="string">&quot;https://ziyuan.baidu.com/college/articleinfo?id=1464&quot;</span>,</span><br><span class="line">        <span class="string">&quot;appid&quot;</span>: <span class="string">&quot;1582926961485115&quot;</span>,</span><br><span class="line">        <span class="string">&quot;title&quot;</span>: <span class="string">&quot;百度移动搜索落地页体验白皮书——广告篇2.0&quot;</span>,</span><br><span class="line">        <span class="string">&quot;images&quot;</span>: [</span><br><span class="line">            <span class="string">&quot;https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png&quot;</span>,</span><br><span class="line">            <span class="string">&quot;https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_ca79a146.png&quot;</span>,</span><br><span class="line">            <span class="string">&quot;https://m.baidu.com/static/index/plus/plus_logo.png&quot;</span></span><br><span class="line">            ],</span><br><span class="line">        <span class="string">&quot;description&quot;</span>: <span class="string">&quot;优质合理的广告作为信息的补充，广受用户喜欢。2017年初百度用户体验部针对用户进行了满意度调研，发现很多恶意低质的广告严重破坏着用户的搜索体验。&quot;</span>,</span><br><span class="line">        <span class="string">&quot;pubDate&quot;</span>: <span class="string">&quot;2017-06-15T08:00:01&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>操作记录：<br>同样在header.php文件中<head>后面添加以下代码我是加在canonical标签后面：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--百度熊掌号添加<span class="title class_">JSON</span>_LD数据--&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;application/ld+json&quot;</span>&gt;</span><span class="language-handlebars"><span class="language-xml"></span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars"><span class="language-xml">    &#123;</span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars"><span class="language-xml">        &quot;@context&quot;: &quot;https://ziyuan.baidu.com/contexts/cambrian.jsonld&quot;,</span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars"><span class="language-xml">        &quot;@id&quot;: &quot;<span class="meta">&lt;?php the_permalink() ?&gt;</span>&quot;,</span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars"><span class="language-xml">        &quot;appid&quot;: &quot;1582926961485115&quot;,</span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars"><span class="language-xml">        &quot;title&quot;: &quot;<span class="meta">&lt;?php the_title(); ?&gt;</span>&quot;,</span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars"><span class="language-xml">        &quot;images&quot;: [</span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars"><span class="language-xml">            &quot;http://www.tenanji.cn/wp-content/themes/begin/img/favicon.png&quot;</span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars"><span class="language-xml">            ],</span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars"><span class="language-xml">        &quot;description&quot;: &quot;<span class="meta">&lt;?php if (has_excerpt())&#123; ?&gt;</span></span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars"><span class="language-xml">         <span class="meta">&lt;?php the_excerpt() ?&gt;</span></span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars"><span class="language-xml">        <span class="meta">&lt;?php &#125; else &#123; echo mb_strimwidth(strip_tags(apply_filters(&#x27;the_content&#x27;, $post-&gt;post_content)), 0, 120,&quot;...&quot;); &#125; ?&gt;</span>&quot;,</span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars"><span class="language-xml">        &quot;pubDate&quot;: &quot;<span class="meta">&lt;?php echo get_the_date() . &#x27;T&#x27;. get_the_time(&#x27;H:i:s&#x27;); ?&gt;</span>&quot;</span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars"><span class="language-xml">    &#125;</span></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars"><span class="language-xml"></span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>第三步：添加熊掌号ID声明<br>官方介绍：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;//msite.baidu.com/sdk/c.js?appid=1582926961485115&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在页面</head>标签前添加代码</p>
+<p>操作记录：<br>还是接着上面两部的后面继续添加代码，不需要修改，直接添加百度提供的代码就行。</p>
+<p>第四部：添加关注功能代码<br>官方介绍：<br>添加需要展现的bar(只允许添加2个，后期会审核)</p>
+<p>吸顶bar</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;cambrian.<span class="title function_">render</span>(<span class="string">&#x27;head&#x27;</span>)&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在页面<body>标签后添加代码</p>
+<p>文章段落间bar</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;cambrian.<span class="title function_">render</span>(<span class="string">&#x27;body&#x27;</span>)&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在页面段落之间添加代码</p>
+<p>底部bar</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;cambrian.<span class="title function_">render</span>(<span class="string">&#x27;tail&#x27;</span>)&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在页面文章结束位置添加代码</p>
+<p>注意：上述三种bar在样式上没有 预留左右边距，若页面自身没有设置边距，建议按照如下方法使用。 其中padding-left、padding-right为边距属性，可按需修改。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;padding-left: 17px; padding-right: 17px;&quot;&gt;</span><br><span class="line">对应bar代码</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>操作记录：<br>三种都试了一下，进过对比还是觉得底部bar比较好看，就放在文章底部了，找到主题文件的content.php，在第91行代码下面添加了关注代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;single-content&quot;&gt;</span><br><span class="line">    &lt;?php if ( has_excerpt() ) &#123; ?&gt;&lt;span class=&quot;abstract&quot;&gt;&lt;fieldset&gt;&lt;legend&gt;&lt;?php _e( &#x27;摘要&#x27;, &#x27;leiben&#x27; ); ?&gt;&lt;/legend&gt;&lt;?php the_excerpt() ?&gt;&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;&lt;/fieldset&gt;&lt;/span&gt;&lt;?php &#125;?&gt;</span><br><span class="line"> </span><br><span class="line">    &lt;?php get_template_part(&#x27;ad/ads&#x27;, &#x27;single&#x27;); ?&gt;</span><br><span class="line"> </span><br><span class="line">    &lt;?php the_content(); ?&gt;</span><br><span class="line">    &lt;script&gt;cambrian.render(&#x27;tail&#x27;)&lt;/script&gt;&lt;!--添加熊掌号关注功能代码-底部bar--&gt;</span><br><span class="line">   &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>以上内容为个人操作记录，用作备忘。仅供参考，对网站收录是否有加成还不知道，本人菜鸟还要慢慢学习，欢迎留言指导交流。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://www.liuzw.cn">溜追</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.liuzw.cn/post/1666283153.html">https://www.liuzw.cn/post/1666283153.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.liuzw.cn" target="_blank">溜追是菜鸟</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn-2do.pages.dev/logo.svg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/post/2913615848.html" title="设置win10自动登录"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">设置win10自动登录</div></div></a></div><div class="next-post pull-right"><a href="/post/820644251.html" title="用PHP代码实现在一个虚拟主机上部署多个站点"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">用PHP代码实现在一个虚拟主机上部署多个站点</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn-2do.pages.dev/logo.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">溜追</div><div class="author-info__description">一个菜鸟的博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/3055747222.html" title="meta 详解，html5 meta 标签日常设置">meta 详解，html5 meta 标签日常设置</a><time datetime="2020-07-29T16:00:00.000Z" title="发表于 2020-07-30 00:00:00">2020-07-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/2940347729.html" title="总结php删除html标签和标签内的内容的方法">总结php删除html标签和标签内的内容的方法</a><time datetime="2020-07-29T16:00:00.000Z" title="发表于 2020-07-30 00:00:00">2020-07-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/2053545321.html" title="京东POP京东物流仓储服务费、收派服务费（快递费）开票申请步骤">京东POP京东物流仓储服务费、收派服务费（快递费）开票申请步骤</a><time datetime="2020-07-27T16:00:00.000Z" title="发表于 2020-07-28 00:00:00">2020-07-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/1507099963.html" title="京东POP京准通后台京东快车、购物触点、京东海投、京挑客等发票申请步骤">京东POP京准通后台京东快车、购物触点、京东海投、京挑客等发票申请步骤</a><time datetime="2020-07-27T16:00:00.000Z" title="发表于 2020-07-28 00:00:00">2020-07-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/1905807051.html" title="京东POP商家后台技术服务费、京豆、佣金等发票申请操作步骤">京东POP商家后台技术服务费、京豆、佣金等发票申请操作步骤</a><time datetime="2020-07-27T16:00:00.000Z" title="发表于 2020-07-28 00:00:00">2020-07-28</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 溜追</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></body></html>
